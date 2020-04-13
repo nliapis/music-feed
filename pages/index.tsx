@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';

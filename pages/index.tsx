@@ -9,7 +9,7 @@ function fetcher(url: string) {
   return fetch(url).then((r) => r.json());
 }
 
-export default function Index(props: any) {
+export default function Index() {
   const router = useRouter();
   const { data, error } = useSWR(
     `/api/albums?${queryString.stringify(router.query)}`,

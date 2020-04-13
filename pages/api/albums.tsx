@@ -11,11 +11,14 @@ export default async (
 
   const limit = queryString.stringify(query) || 'limit=100';
 
-  const getAlbumsReq = await fetch(
-    `https://itunes.apple.com/us/rss/topalbums/${limit}/json`
-  );
+  try {
+    const albums = await fetch(
+      `https://itunes.apple.com/us/rss/topalbums/${limit}/json`
+    );
 
-  const data: Album = await getAlbumsReq.json();
-
-  res.status(200).json(data.feed.entry as Entry[]);
+    const data: Album = await albums.json();
+    res.status(200).json(data.feed.entry as Entry[]);
+  } catch (error) {
+    res.status(500).json({ statusCode: 500, message: error });
+  }
 };

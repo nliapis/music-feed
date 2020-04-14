@@ -1,22 +1,29 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Container from '../../components/Container';
-import Layout from '../../components/Layout';
-import useSWR from 'swr';
-import queryString from 'query-string';
+import { useEffect, useState } from 'react';
+import { Container, Layout, Card } from '../../components';
 import { Entry } from '../../interfaces';
 
 export default function Album() {
-  const album: Entry = JSON.parse(localStorage.getItem('album') || '');
+  const [album, setAlbum] = useState<Entry | ''>('');
+  useEffect(() => {
+    setAlbum(JSON.parse(localStorage.getItem('album') || ''));
+  }, []);
+
+  if (!album) {
+    return (
+      <Layout>
+        <Container>There is no available album</Container>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
       <Container>
-        <article>
-          <Head>
-            <title></title>
-          </Head>
-        </article>
+        <Head>
+          <title>{album['im:name'].label}</title>
+        </Head>
+        <Card album={album} />
       </Container>
     </Layout>
   );

@@ -5,6 +5,7 @@ import Layout from './Layout';
 import AlbumImage from './AlbumImage';
 import AlbumItemContentDetails from './AlbumItemContentDetails';
 import SearchAlbum from './SearchAlbum';
+import Card from './Card';
 
 export {
   Container,
@@ -14,4 +15,5 @@ export {
   AlbumImage,
   AlbumItemContentDetails,
   SearchAlbum,
+  Card,
 };

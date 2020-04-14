@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders AlbumImage 1`] = `
+<img
+  alt=""
+  className="image"
+  height="170"
+  src="https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/59/7e/51/597e5166-d6c8-ac39-8217-74d6cd9baaa6/19UMGIM94144.rgb.jpg/170x170bb.png"
+/>
+`;

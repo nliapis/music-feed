@@ -3,8 +3,17 @@ import styles from './index.module.scss';
 
 type Props = {
   children: React.ReactNode;
+  type?: string;
 };
 
-export default function Container({ children }: Props) {
-  return <div className={styles.container}>{children}</div>;
+export default function Container({ children, type }: Props) {
+  return (
+    <div
+      className={`${styles.container} ${
+        type === 'grid' ? styles['container--grid'] : ''
+      }`}
+    >
+      {children}
+    </div>
+  );
 }

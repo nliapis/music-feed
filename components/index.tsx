@@ -4,6 +4,7 @@ import Container from './Container';
 import Layout from './Layout';
 import AlbumImage from './AlbumImage';
 import AlbumItemContentDetails from './AlbumItemContentDetails';
+import SearchAlbum from './SearchAlbum';
 
 export {
   Container,
@@ -12,4 +13,5 @@ export {
   AlbumItem,
   AlbumImage,
   AlbumItemContentDetails,
+  SearchAlbum,
 };

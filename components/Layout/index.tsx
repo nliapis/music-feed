@@ -7,9 +7,7 @@ type Props = {
 export default function Layout({ children }: Props) {
   return (
     <>
-      <div>
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
       <Footer />
     </>
   );

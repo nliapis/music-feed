@@ -1,0 +1,41 @@
+.albumItem__link {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;
+
+  &:hover {
+
+    .albumItem__content-overlay,
+    .albumItem__content-details {
+      opacity: 1;
+    }
+  }
+}
+
+.albumItem__content-overlay {
+  transition: all 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.albumItem__content-details {
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out 0s;
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  padding: 8px;
+}

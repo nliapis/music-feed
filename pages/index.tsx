@@ -46,8 +46,12 @@ export default function Index() {
           {data
             .filter((album: Entry) => {
               return (
-                album['im:name'].label.toLowerCase().includes(searchValue) ||
-                album['im:artist'].label.toLowerCase().includes(searchValue)
+                album['im:name'].label
+                  .toLowerCase()
+                  .includes(searchValue.toLowerCase()) ||
+                album['im:artist'].label
+                  .toLowerCase()
+                  .includes(searchValue.toLowerCase())
               );
             })
             .map((album: Entry) => (

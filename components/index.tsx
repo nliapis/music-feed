@@ -1,6 +1,6 @@
-import AlbumItem from './albumItem';
-import Footer from './footer';
-import Container from './container';
-import Layout from './layout';
+import AlbumItem from './AlbumItem';
+import Footer from './Footer';
+import Container from './Container';
+import Layout from './Layout';
 
 export { Container, Footer, Layout, AlbumItem };

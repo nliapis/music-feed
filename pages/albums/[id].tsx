@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Container from '../../components/container';
-import Layout from '../../components/layout';
+import Container from '../../components/Container';
+import Layout from '../../components/Layout';
 import useSWR from 'swr';
 import queryString from 'query-string';
 import { Entry } from '../../interfaces';

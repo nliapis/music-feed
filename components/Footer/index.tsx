@@ -1,4 +1,4 @@
-import Container from "./container";
+import { Container } from '../index';
 
 export default function Footer() {
   return (

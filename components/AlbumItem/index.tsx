@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Entry } from '../interfaces';
+import { Entry } from '../../interfaces';
 
 export default function AlbumItem(album: Entry) {
   return (
